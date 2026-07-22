@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
-Sitemap: https://aptravelsandcargo.com/sitemap.xml
+
+# Allow crawling of JS and assets so Google can render pages correctly.
+# Block common ad-tracking query strings from showing duplicate content in search.
+Disallow: /*?*gclid
+Disallow: /*?*utm_
+
+Sitemap: https://apcargos.in/sitemap.xml
