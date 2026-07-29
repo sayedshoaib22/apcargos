@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Looking for reliable cargo services in Maharashtra? AP Cargos provides door-to-door cargo transport, parcel delivery, household shifting, office relocation, and commercial logistics with affordable pricing.">
+    <meta name="keywords" content="Cargo Services in Maharashtra, Maharashtra Cargo Transport, Parcel Delivery Maharashtra, Goods Transport Maharashtra, Logistics Company Maharashtra, Door to Door Cargo Maharashtra, Household Shifting Maharashtra">
+    <title>Cargo Services in Maharashtra | Door-to-Door Transport | AP Cargos</title>
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "AP Cargos",
+        "description": "Professional cargo and logistics services in Maharashtra",
+        "url": "https://www.apcargos.com/maharashtra-cargo-service",
+        "telephone": "+91-XXXX-XXXX-XX",
+        "email": "info@apcargos.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Maharashtra",
+            "addressRegion": "Maharashtra",
+            "addressCountry": "IN"
+        },
+        "areaServed": ["Mumbai", "Pune", "Nashik", "Nagpur", "Thane", "Navi Mumbai", "Aurangabad", "Kolhapur", "Solapur", "Jalgaon", "Sangli", "Satara", "Ratnagiri", "Amravati"],
+        "priceRange": "$$"
+    }
+    </script>
+
+    <style>
+        /* ==========================================================================
+           AP CARGOS — Design Tokens & Core Styles
+           ========================================================================== */
+
+        :root {
+          /* Color */
+          --color-bg: #FFFFFF;
+          --color-surface: rgba(255,255,255,0.7);
+          --color-ink: #071633;
+          --color-ink-muted: #557086;
+          --color-accent: #E85A11;
+          --color-accent-2: #FF7A2D;
+          --color-accent-dark: #C44A05;
+          --color-success: #0E7C66;
+          --color-border: rgba(9,25,48,0.06);
+          --color-board-bg: #071633;
+          --color-board-text: #FFC94D;
+          --color-route: #E85A11;
+          --color-confirm: #0E7C66;
+
+          /* Type */
+          --font-display: "Poppins", "Barlow Condensed", sans-serif;
+          --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+          /* Scale */
+          --space-1: 0.5rem;
+          --space-2: 1rem;
+          --space-3: 1.5rem;
+          --space-4: 2.5rem;
+          --space-5: 4rem;
+          --space-6: 6rem;
+          --radius: 10px;
+          --radius-sm: 6px;
+          --max-width: 1180px;
+          --shadow-card: 0 6px 22px rgba(9,25,48,0.08), 0 2px 6px rgba(9,25,48,0.04);
+          --glass-shadow: 0 8px 30px rgba(7,22,51,0.12);
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        @media (prefers-reduced-motion: reduce) {
+          html { scroll-behavior: auto; }
+          *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+        }
+
+        body {
+          margin: 0;
+          font-family: var(--font-body);
+          color: var(--color-ink);
+          background: var(--color-bg);
+          line-height: 1.55;
+          -webkit-font-smoothing: antialiased;
+        }
+
+        img { max-width: 100%; display: block; }
+        a { color: inherit; }
+
+        h1, h2, h3 {
+          font-family: var(--font-display);
+          font-weight: 700;
+          line-height: 1.05;
+          letter-spacing: 0.2px;
+          margin: 0 0 var(--space-2);
+        }
+        h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); }
+        h2 { font-size: clamp(1.6rem, 3.4vw, 2.3rem); }
+        h3 { font-size: 1.25rem; }
+        p { margin: 0 0 var(--space-2); color: var(--color-ink-muted); }
+
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-3); }
+        .section { padding: var(--space-6) 0; }
+        .section--tight { padding: var(--space-5) 0; }
+        .section--alt { background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+
+        .eyebrow {
+          font-family: var(--font-mono);
+          font-size: 0.78rem;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--color-route);
+          display: block;
+          margin-bottom: var(--space-1);
+        }
+
+        /* Header */
+        .site-header {
+          position: sticky; top: 0; z-index: 500;
+          background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02));
+          transition: background-color .28s ease, box-shadow .28s ease;
+        }
+        .site-header.scrolled { background: #ffffff; box-shadow: 0 6px 20px rgba(9,25,48,0.06); }
+        .site-header__inner { max-width: var(--max-width); margin: 0 auto; padding: 18px var(--space-3); display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; color: var(--color-ink); }
+        .nav-links { display: flex; gap: var(--space-3); list-style: none; margin: 0; padding: 0; }
+        .nav-links a { text-decoration: none; font-size: 0.95rem; font-weight: 600; color: var(--color-ink-muted); }
+        .nav-links a:hover { color: var(--color-route); }
+
+        /* Buttons */
+        .btn {
+          display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+          font-family: var(--font-body); font-weight: 700; font-size: 1rem;
+          padding: 14px 22px; border-radius: var(--radius-sm); text-decoration: none;
+          border: 0; cursor: pointer; transition: transform .18s cubic-bezier(.2,.9,.3,1), box-shadow .18s ease;
+          line-height: 1;
+        }
+        .btn:hover { transform: translateY(-4px); box-shadow: 0 14px 40px rgba(9,25,48,0.08); }
+        .btn:active { transform: translateY(-2px); }
+        .btn-call { background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2)); color: #fff; box-shadow: 0 12px 30px rgba(232,89,12,0.18); padding: 14px 26px; border-radius: 12px; }
+        .btn-outline { background: transparent; color: var(--color-ink); border: 1px solid var(--color-ink); }
+        .btn-outline:hover { background: var(--color-ink); color: #fff; }
+        .btn-block { width: 100%; }
+
+        /* Hero */
+        .hero {
+          padding: var(--space-6) 0 var(--space-4);
+          position: relative; overflow: hidden;
+          background: linear-gradient(180deg, #FFFFFF 0%, #f7f9fb 100%);
+          isolation: isolate;
+        }
+        .hero__grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-5); align-items: start; }
+        @media (max-width: 940px) { .hero__grid { grid-template-columns: 1fr; } }
+
+        .trust-row { display: flex; flex-wrap: wrap; gap: 10px; margin: var(--space-2) 0 var(--space-3); }
+        .trust-chip {
+          display: inline-flex; align-items: center; gap: 10px;
+          font-size: 0.9rem; font-weight: 700; color: var(--color-ink);
+          background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.75));
+          padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(9,25,48,0.06);
+          box-shadow: 0 6px 18px rgba(9,25,48,0.04);
+        }
+
+        .hero-cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: var(--space-3); }
+
+        /* Route Board */
+        .route-board {
+          background: linear-gradient(180deg, #071633, #0d2747);
+          border-radius: 14px;
+          padding: var(--space-3);
+          color: var(--color-board-text);
+          font-family: var(--font-mono);
+          box-shadow: 0 12px 36px rgba(7,22,51,0.28);
+        }
+        .route-board__label { font-size: 0.72rem; letter-spacing: 0.12em; opacity: 0.75; text-transform: uppercase; margin-bottom: 10px; color: #cfead9; }
+        .route-board__row {
+          display: flex; align-items: center; justify-content: space-between;
+          padding: 10px 0; border-bottom: 1px dashed rgba(255,201,77,0.25);
+          font-size: 1rem;
+        }
+        .route-board__row:last-child { border-bottom: none; }
+        .route-board__dest { display: flex; align-items: center; gap: 10px; }
+        .route-board__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--color-board-text); flex: none; }
+
+        /* Lead Form Card */
+        .lead-form-card {
+          background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(255,255,255,0.6));
+          border: 1px solid rgba(9,25,48,0.06);
+          backdrop-filter: blur(6px) saturate(120%);
+          border-radius: 14px; padding: var(--space-3); box-shadow: var(--glass-shadow);
+          transition: transform .24s cubic-bezier(.2,.9,.3,1), box-shadow .24s ease;
+        }
+        .lead-form-card:hover { transform: translateY(-6px); box-shadow: 0 18px 48px rgba(7,22,51,0.12); }
+        .lead-form-card h3 { margin-bottom: 4px; }
+        .form-sub { font-size: 0.9rem; margin-bottom: var(--space-2); }
+        .field { margin-bottom: 14px; }
+        .field label { display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 6px; }
+        .field input, .field select {
+          width: 100%; padding: 12px 14px; border: 1.5px solid var(--color-border);
+          border-radius: var(--radius-sm); font-size: 1rem; font-family: var(--font-body);
+          background: #fff; color: var(--color-ink);
+        }
+        .field input:focus, .field select:focus { border-color: var(--color-route); }
+
+        /* Cards / Grids */
+        .grid { display: grid; gap: var(--space-3); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        @media (max-width: 940px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .grid-3 { grid-template-columns: 1fr; } }
+
+        .card {
+          background: #fff; border: 1px solid rgba(9,25,48,0.04);
+          border-radius: 12px; padding: var(--space-3); box-shadow: 0 10px 30px rgba(9,25,48,0.06);
+          transition: transform .2s cubic-bezier(.2,.9,.3,1), box-shadow .24s ease;
+        }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 22px 54px rgba(9,25,48,0.10); }
+        .card__icon { width: 42px; height: 42px; color: var(--color-route); margin-bottom: 10px; font-size: 2rem; }
+        .card h3 { color: var(--color-ink); }
+        .card p { font-size: 0.93rem; }
+
+        /* Coverage Pills */
+        .coverage-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: var(--space-3); }
+        .coverage-pill {
+          background: var(--color-surface); border: 1px solid var(--color-border);
+          padding: 8px 14px; border-radius: 999px; font-size: 0.88rem; font-weight: 600;
+        }
+
+        /* Steps */
+        .step { display: flex; gap: 16px; padding: var(--space-2) 0; border-bottom: 1px solid var(--color-border); }
+        .step:last-child { border-bottom: none; }
+        .step__num {
+          font-family: var(--font-display); font-weight: 700; font-size: 1.5rem;
+          color: var(--color-route); flex: none; width: 46px;
+        }
+
+        /* Testimonials */
+        .review-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-3); }
+        .review-stars { color: #F2A600; font-size: 1rem; margin-bottom: 8px; letter-spacing: 2px; }
+        .review-author { display: flex; align-items: center; gap: 10px; margin-top: var(--space-2); }
+        .review-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--color-route); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
+        .review-meta { font-size: 0.82rem; color: var(--color-ink-muted); }
+
+        /* FAQ */
+        .faq-item { border-bottom: 1px solid var(--color-border); }
+        .faq-item summary {
+          cursor: pointer; padding: 18px 4px; font-weight: 700; font-size: 1.03rem;
+          list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px;
+        }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 1.4rem; color: var(--color-route); flex: none; }
+        .faq-item[open] summary::after { content: "–"; }
+        .faq-item p { padding: 0 4px 18px; }
+
+        /* CTA Band */
+        .cta-band { background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2)); color: #fff; text-align: center; padding: var(--space-5) 0; border-radius: 12px; margin-top: var(--space-4); }
+        .cta-band h2 { color: #fff; }
+        .cta-band p { color: rgba(255,255,255,0.92); }
+        .cta-band .hero-cta-row { justify-content: center; }
+
+        /* Footer */
+        .site-footer { background: var(--color-board-bg); color: #cbd6d0; padding: var(--space-5) 0 var(--space-3); font-size: 0.9rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--space-3); }
+        @media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        .site-footer h4 { color: #fff; font-family: var(--font-body); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+        .site-footer a { color: #cbd6d0; text-decoration: none; }
+        .site-footer a:hover { color: var(--color-board-text); }
+        .site-footer ul { list-style: none; padding: 0; margin: 0; }
+        .site-footer li { margin-bottom: 8px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); margin-top: var(--space-4); padding-top: var(--space-2); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 0.8rem; color: #8aa199; }
+
+        /* Breadcrumb */
+        .breadcrumb { font-size: 0.82rem; color: var(--color-ink-muted); padding: 14px 0; }
+        .breadcrumb a { color: var(--color-ink-muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--color-route); }
+
+        /* Utility */
+        .text-center { text-align: center; }
+        .mt-0 { margin-top: 0; }
+    </style>
+</head>
+<body>
+    <!-- Breadcrumb -->
+    <div class="breadcrumb" style="padding: 14px var(--space-3);">
+        <div class="container">
+            <a href="https://www.apcargos.com">Home</a> / <a href="https://www.apcargos.com/services">Services</a> / Maharashtra Cargo
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="https://www.apcargos.com" class="logo">AP Cargos</a>
+            <nav style="flex: 1;">
+                <ul class="nav-links">
+                    <li><a href="https://www.apcargos.com">Home</a></li>
+                    <li><a href="https://www.apcargos.com/about">About</a></li>
+                    <li><a href="https://www.apcargos.com/services">Services</a></li>
+                    <li><a href="https://www.apcargos.com/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="btn btn-call">Get Quote</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__grid">
+                <div>
+                    <span class="eyebrow">Maharashtra Cargo Services</span>
+                    <h1>Fast, Reliable Cargo Services Across Maharashtra</h1>
+                    <p style="font-size: 1.1rem; color: var(--color-ink-muted); margin-top: var(--space-2);">Professional door-to-door transport, household shifting, and commercial logistics solutions for all major cities in Maharashtra.</p>
+                    
+                    <div class="trust-row">
+                        <div class="trust-chip">✓ 10+ Years Experience</div>
+                        <div class="trust-chip">✓ 100% Insured Cargo</div>
+                        <div class="trust-chip">✓ Real-Time Tracking</div>
+                    </div>
+                    
+                    <div class="hero-cta-row">
+                        <button class="btn btn-call">Book Now</button>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="route-board">
+                    <div class="route-board__label">Live Routes</div>
+                    <div class="route-board__row">
+                        <div class="route-board__dest">
+                            <span class="route-board__dot"></span>
+                            <span>Mumbai</span>
+                        </div>
+                        <div>260 km</div>
+                    </div>
+                    <div class="route-board__row">
+                        <div class="route-board__dest">
+                            <span class="route-board__dot"></span>
+                            <span>Pune</span>
+                        </div>
+                        <div>4-6 hrs</div>
+                    </div>
+                    <div class="route-board__row">
+                        <div class="route-board__dest">
+                            <span class="route-board__dot"></span>
+                            <span>Nagpur</span>
+                        </div>
+                        <div>800 km</div>
+                    </div>
+                    <div class="route-board__row">
+                        <div class="route-board__dest">
+                            <span class="route-board__dot"></span>
+                            <span>Nashik</span>
+                        </div>
+                        <div>2-3 hrs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section section--alt">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: var(--space-5);">About Our Maharashtra Cargo Service</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); align-items: start;">
+                <div>
+                    <p>AP Cargos has been serving Maharashtra with exceptional cargo and logistics services for over a decade. We specialize in providing reliable, affordable, and timely delivery solutions to individuals and businesses across the state.</p>
+                    <p>From small parcel deliveries to large commercial shipments, household relocations, and office shifts, our professional team ensures every shipment is handled with care and delivered on schedule.</p>
+                    <div class="coverage-list">
+                        <div class="coverage-pill">✓ 14 Major Cities</div>
+                        <div class="coverage-pill">✓ 24/7 Support</div>
+                        <div class="coverage-pill">✓ Modern Fleet</div>
+                        <div class="coverage-pill">✓ Expert Team</div>
+                    </div>
+                </div>
+                <div style="background: var(--color-surface); border-radius: 14px; padding: var(--space-4); display: flex; align-items: center; justify-content: center; min-height: 300px; font-size: 4rem;">🚚</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: var(--space-5);">Our Services</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card__icon">📦</div>
+                    <h3>Parcel Delivery</h3>
+                    <p>Fast and secure parcel delivery across Maharashtra with real-time tracking and door-to-door service.</p>
+                </div>
+                <div class="card">
+                    <div class="card__icon">🏠</div>
+                    <h3>Household Shifting</h3>
+                    <p>Professional household relocation with careful packing, loading, and safe transportation of belongings.</p>
+                </div>
+                <div class="card">
+                    <div class="card__icon">🏢</div>
+                    <h3>Office Relocation</h3>
+                    <p>Specialized office moving for minimal downtime and professional handling of equipment and documents.</p>
+                </div>
+                <div class="card">
+                    <div class="card__icon">🚛</div>
+                    <h3>Goods Transport</h3>
+                    <p>Heavy goods and bulk cargo transportation with vehicles for various cargo types and weights.</p>
+                </div>
+                <div class="card">
+                    <div class="card__icon">📊</div>
+                    <h3>Commercial Logistics</h3>
+                    <p>Comprehensive logistics solutions including warehousing, distribution, and supply chain management.</p>
+                </div>
+                <div class="card">
+                    <div class="card__icon">🌍</div>
+                    <h3>Pan-Maharashtra Coverage</h3>
+                    <p>Reliable service across all major cities with flexible pickup and delivery options.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cities Section -->
+    <section class="section section--alt">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: var(--space-5);">Cities We Serve</h2>
+            <div class="coverage-list" style="justify-content: center;">
+                <div class="coverage-pill">Mumbai</div>
+                <div class="coverage-pill">Pune</div>
+                <div class="coverage-pill">Nashik</div>
+                <div class="coverage-pill">Nagpur</div>
+                <div class="coverage-pill">Thane</div>
+                <div class="coverage-pill">Navi Mumbai</div>
+                <div class="coverage-pill">Aurangabad</div>
+                <div class="coverage-pill">Kolhapur</div>
+                <div class="coverage-pill">Solapur</div>
+                <div class="coverage-pill">Jalgaon</div>
+                <div class="coverage-pill">Sangli</div>
+                <div class="coverage-pill">Satara</div>
+                <div class="coverage-pill">Ratnagiri</div>
+                <div class="coverage-pill">Amravati</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: var(--space-5);">Why Choose AP Cargos</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card__icon">⚡</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick pickup and timely delivery with optimized routes and efficient logistics management.</p>
+                </div>
+                <div class="card">
+                    <div class="card__icon">🛡️</div>
+                    <h3>Full Insurance</h3>
+                    <p>Complete cargo insurance coverage ensures peace of mind for all your shipments and valuables.</p>
+                </div>
+                <div class="card">
+                    <div class="card__icon">👥</div>
+                    <h3>Expert Team</h3>
+                    <p>Trained professionals with years of experience in handling all types of cargo safely.</p>
+                </div>
+                <div class="card">
+                    <div class="card__icon">💰</div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Transparent and competitive rates with no hidden charges. Flexible payment options.</p>
+                </div>
+                <div class="card">
+                    <div class="card__icon">📍</div>
+                    <h3>Real-Time Tracking</h3>
+                    <p>Live tracking system allows you to monitor your shipment status anytime, anywhere.</p>
+                </div>
+                <div class="card">
+                    <div class="card__icon">⭐</div>
+                    <h3>Reliable Service</h3>
+                    <p>Consistent performance with excellent customer feedback and high satisfaction ratings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transport Process -->
+    <section class="section section--alt">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: var(--space-5);">Our Transport Process</h2>
+            <div style="max-width: 700px; margin: 0 auto;">
+                <div class="step">
+                    <div class="step__num">1</div>
+                    <div>
+                        <h3 style="margin-top: 0;">Booking</h3>
+                        <p>Contact us with shipment details and get an instant quote. Easy online or phone booking.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step__num">2</div>
+                    <div>
+                        <h3 style="margin-top: 0;">Pickup</h3>
+                        <p>Our team arrives at scheduled time and carefully collects your cargo from your location.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step__num">3</div>
+                    <div>
+                        <h3 style="margin-top: 0;">Transit</h3>
+                        <p>Cargo is transported safely in modern vehicles with real-time GPS tracking available.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step__num">4</div>
+                    <div>
+                        <h3 style="margin-top: 0;">Delivery</h3>
+                        <p>Timely door-to-door delivery with customer confirmation and delivery documentation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: var(--space-5);">Frequently Asked Questions</h2>
+            <div style="max-width: 700px; margin: 0 auto;">
+                <details class="faq-item">
+                    <summary>What areas does AP Cargos serve in Maharashtra?</summary>
+                    <p>We serve all major cities in Maharashtra including Mumbai, Pune, Nashik, Nagpur, Thane, Navi Mumbai, Aurangabad, Kolhapur, Solapur, Jalgaon, Sangli, Satara, Ratnagiri, and Amravati. Contact us for specific city services.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How can I get a quote for my cargo?</summary>
+                    <p>You can get a quote by calling our customer service team, visiting our website, or filling out our online quote form. Provide details about your cargo, pickup location, and destination. We'll provide a competitive rate within hours.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is my cargo insured during transport?</summary>
+                    <p>Yes, all cargo transported by AP Cargos is fully insured. Our insurance coverage protects against loss or damage during pickup, transit, and delivery. Insurance terms and limits are clearly outlined in our service agreement.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What payment methods do you accept?</summary>
+                    <p>We accept multiple payment methods including cash, bank transfer, online payment, credit/debit cards, and cheques. Flexible payment options are available for corporate clients and bulk shipments.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I track my shipment in real-time?</summary>
+                    <p>Yes, all shipments come with real-time GPS tracking. You can monitor your cargo's location and status through our website or mobile app. Updates are provided via SMS and email as well.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section section--alt">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: var(--space-5);">Customer Reviews</h2>
+            <div class="grid grid-3">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Excellent service! AP Cargos handled our office relocation from Mumbai to Pune smoothly. Professional team and timely delivery."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">RK</div>
+                        <div>
+                            <strong>Rajesh Kumar</strong>
+                            <div class="review-meta">Mumbai</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Very reliable and affordable cargo service. Our household goods reached safely without any damage. Great experience!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">PS</div>
+                        <div>
+                            <strong>Priya Sharma</strong>
+                            <div class="review-meta">Pune</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Fast and professional service. We ship multiple parcels every month and AP Cargos never disappoints. Highly recommended!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">AP</div>
+                        <div>
+                            <strong>Amit Patel</strong>
+                            <div class="review-meta">Nagpur</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-band">
+                <h2>Ready to Move Your Cargo?</h2>
+                <p>Get a free quote today and experience the AP Cargos difference</p>
+                <div class="hero-cta-row">
+                    <button class="btn btn-call" style="margin: 0 auto; background: #fff; color: var(--color-accent);">Get Started Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>AP Cargos</h4>
+                    <p>Your trusted cargo and logistics partner across Maharashtra. Fast, reliable, and affordable delivery solutions.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="https://www.apcargos.com">Home</a></li>
+                        <li><a href="https://www.apcargos.com/about">About</a></li>
+                        <li><a href="https://www.apcargos.com/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="https://www.apcargos.com/door-to-door-cargo">Door-to-Door Cargo</a></li>
+                        <li><a href="https://www.apcargos.com/household-shifting">Household Shifting</a></li>
+                        <li><a href="https://www.apcargos.com/office-relocation">Office Relocation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Locations</h4>
+                    <ul>
+                        <li><a href="https://www.apcargos.com/hyderabad-cargo-service">Hyderabad Cargo</a></li>
+                        <li><a href="https://www.apcargos.com/andhra-pradesh-cargo">Andhra Pradesh Cargo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AP Cargos. All rights reserved.</p>
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky header on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.site-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
