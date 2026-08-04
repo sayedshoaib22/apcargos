@@ -34,6 +34,15 @@
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#16233A">
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18341487652"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18341487652');
+  </script>
+
   <!-- Performance: preconnect + font-display swap -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -141,8 +150,19 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+  gtag('config', 'AW-18341487652', {
+    'allow_google_signals': true,
+    'allow_ad_personalization_signals': true
+  });
 
-  gtag('config', 'AW-18341487652');
+  // Google Ads conversion tracking helper
+  window.trackConversion = function(label, value) {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18341487652/' + (label || 'default'),
+      'value': value || 1.0,
+      'currency': 'INR'
+    });
+  };
 </script>
 </head>
 <body>
